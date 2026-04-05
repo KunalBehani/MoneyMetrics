@@ -1,0 +1,164 @@
+/* Component Specific Styles */
+.icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background-clip: padding-box;
+}
+
+.icon-box.income { 
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+  color: var(--income-color); 
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  box-shadow: inset 0 0 20px rgba(16, 185, 129, 0.1);
+}
+.icon-box.expense { 
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.05));
+  color: var(--expense-color); 
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  box-shadow: inset 0 0 20px rgba(239, 68, 68, 0.1);
+}
+.icon-box.primary { 
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(14, 165, 233, 0.05));
+  color: var(--accent-primary); 
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  box-shadow: inset 0 0 20px rgba(14, 165, 233, 0.1);
+}
+
+.text-income { color: var(--income-color); }
+.text-expense { color: var(--expense-color); }
+
+.txn-title { font-size: 1.15rem; font-weight: 600; display: flex; align-items: center; gap: 8px; color: var(--text-primary); }
+.txn-meta { font-size: 0.9rem; margin-top: 4px; color: var(--text-secondary); }
+.txn-amount { font-size: 1.3rem; font-weight: 700; }
+.txn-actions { display: flex; align-items: center; gap: 8px; }
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 12px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-icon:hover { 
+  background-color: var(--bg-hover); 
+  color: var(--text-primary); 
+  transform: scale(1.1);
+}
+.btn-icon.primary {
+  background-color: rgba(14, 165, 233, 0.1);
+  color: var(--accent-primary);
+}
+.btn-icon.primary:hover {
+  background-color: var(--accent-primary);
+  color: white;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.4);
+}
+.btn-icon.hover-expense:hover { 
+  background-color: var(--expense-color); 
+  color: white; 
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+.mb-2 { margin-bottom: 8px; }
+.mb-4 { margin-bottom: 16px; }
+
+.budget-progress-container { margin-top: 16px; }
+.progress-bar-bg {
+  height: 12px;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: right center; }
+  100% { background-position: left center; }
+}
+
+.bg-success { background: linear-gradient(90deg, #059669, #10b981, #34d399); }
+.bg-warning { background: linear-gradient(90deg, #d97706, #f59e0b, #fbbf24); }
+.bg-danger { background: linear-gradient(90deg, #b91c1c, #ef4444, #f87171); }
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0,0,0,0.2);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 0 20px;
+  height: 54px;
+  flex: 1;
+  transition: all 0.3s;
+}
+.search-bar:focus-within {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+  background-color: rgba(0,0,0,0.3);
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  flex: 1;
+  padding: 0 16px;
+  outline: none;
+  font-size: 1.05rem;
+  font-family: inherit;
+}
+.search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.filter-select {
+  background-color: rgba(0,0,0,0.2);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 0 20px;
+  height: 54px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+.filter-select:hover, .filter-select:focus {
+  border-color: var(--accent-primary);
+  background-color: rgba(0,0,0,0.3);
+}
+
+.filter-select option {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.recurring-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.05));
+  color: #a78bfa;
+  padding: 4px;
+  border-radius: 50%;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
